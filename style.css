@@ -1,20 +1,76 @@
+
 *,
-*::after
-*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Borel", cursive;
 }
 
 
 
 .custom-shape-divider-top-1691412359 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    height: 100vh;
-    background:linear-gradient(#70e1f5,#ffd194);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  height: 100vh;
+  background: linear-gradient(#70e1f5, #ffd194);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.container h1 {
+  margin-top: 4rem;
+  color: rgb(209, 209, 93);
+}
+
+.app-main-container{
+    display: inline-block;
+    width: 50%;
+    margin-top: 3rem;
+}
+
+.add-task-box{
+    margin: auto;
+    width: 80%;
+    height: 50px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.add-task-box input{
+    width: 85%;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid green;
+    padding:5px 10px;
+    color: orange;
+    border-radius: 5px;
+}
+
+.add-task-box input:focus{
+    outline: none;
+    border-color: orange;
+}
+
+.add-task-box button{
+    border: none;
+    height: 35px;
+    background-color: green;
+    color: white;
+    padding: 5px 16px;
+    border-radius: 5px;
+    text-align: center;
 }
