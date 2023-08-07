@@ -4,14 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Borel&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>To-Do List App</title>
-    
+
 </head>
 
 <body>
@@ -29,10 +25,29 @@
         <div class="app-main-container">
             <div class="add-task-box">
                 <input type="text" placeholder="Add new task...">
-                <button>Add</button>
+                <button id="add-task-btn">
+                    Add
+                </button>
+            </div>
+            <div class="task-list-box">
+                <div class="list-item">
+                    <span class="index">1</span>
+                    <p class="text">new</p>
+                    <div class="operation-box">
+                        <button class="edit">
+                            Edit
+                        </button>
+                        <button class="delete">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

@@ -7,8 +7,6 @@
   font-family: "Borel", cursive;
 }
 
-
-
 .custom-shape-divider-top-1691412359 {
   position: absolute;
   top: 0;
@@ -24,7 +22,6 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100vh;
   text-align: center;
 }
 
@@ -37,6 +34,7 @@
     display: inline-block;
     width: 50%;
     margin-top: 3rem;
+    height: fit-content;
 }
 
 .add-task-box{
@@ -74,3 +72,49 @@
     border-radius: 5px;
     text-align: center;
 }
+
+.task-list-box{
+    margin: 3rem auto;
+    background-color: white;
+    width: 80%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.list-item{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.edit, .delete{
+  border: none;
+  height: 35px;
+  padding: 5px 16px;
+  border-radius: 5px;
+  color: white;
+}
+
+.delete{
+    background-color: red;
+}
+
+.edit{
+  background-color:#70a5f5 ;
+}
+.index{
+   color: gray;
+}
+.index, .text{
+  margin-right: 5px;
+}
+
+
+.text{
+  width: 73.5%;
+  text-align: start;
+}
+
+
