@@ -11,8 +11,8 @@ let index = 0;
 
 function AddTask(input) {
   if (input.value.trim() != "") {
-    if(taskList.childElementCount==0){
-        taskList.style.visibility="visible";
+    if (taskList.childElementCount === 0) {
+      taskList.style.visibility = "visible";
     }
     index++;
     taskList.innerHTML += `
@@ -30,7 +30,12 @@ function AddTask(input) {
        </div>
        `;
   } else {
-    alert("Xananı boş saxlamıyın");
+    // alert("Xananı boş saxlamıyın");
+    Swal.fire({
+      text: 'Xananı boş saxlamıyın',
+      icon: 'warning',
+      confirmButtonText: 'Ok'
+    })
   }
 
   RemoveTask(document.querySelectorAll(".delete"));
@@ -40,15 +45,20 @@ function InputValueRemove(input) {
   input.value = "";
 }
 
-function RemoveTask(deleteBtn) {
+async function RemoveTask(deleteBtn) {
   for (let i = 0; i < deleteBtn.length; i++) {
-    deleteBtn[i].onclick = function () {
+    deleteBtn[i].onclick =  function () {
       index--;
       for (let j = i; j < deleteBtn.length; j++) {
         let count = deleteBtn[j].parentElement.parentElement.children[0];
         count.innerText = parseInt(count.innerText) - 1;
       }
       this.parentElement.parentElement.remove();
+       hideTaskListBox();
     };
   }
+}
+
+function hideTaskListBox() {
+  taskList.style.visibility = taskList.childElementCount > 0 ? 'visible' : 'hidden';
 }
